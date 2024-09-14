@@ -54,7 +54,7 @@ if true then
             if not success then
                 print("Error in AutoDamage: ", err)
             end
-            wait(0.1)
+            wait(0.001)
         end
     end
 
@@ -71,7 +71,7 @@ if true then
             if not success then
                 print("Error in AutoSkillDamage: ", err)
             end
-            wait(0.1)
+            wait(0.03)
     end
 
     local function KillAura()
@@ -119,10 +119,6 @@ local function ClaimSeason()
                 print("Error in ClaimSeason: ", err)
             end
     end
-while true do
-wait()
-ClaimSeason()
-end
 
 
     local function ClaimShopGems()
@@ -150,7 +146,7 @@ end
             if not success then
                 print("Error in GetCodes: ", err)
             end
-            wait(0.1)
+            wait(3)
         end
     end
 
@@ -162,7 +158,7 @@ end
             if not success then
                 print("Error in MazeGem: ", err)
             end
-            wait(0.5)
+            wait(2)
         end
     end
 
@@ -177,7 +173,6 @@ end
             wait(0.5)
         end
     end
-
 
 local function W3(functionName)
     local success, err = pcall(function()
@@ -226,7 +221,7 @@ local function W3(functionName)
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
 local function W4(functionName)
@@ -276,7 +271,7 @@ local function W4(functionName)
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
 local function W5(functionName)
@@ -332,7 +327,7 @@ local function W5(functionName)
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
 local function W6(functionName)
@@ -382,7 +377,7 @@ args = {
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
 
@@ -433,7 +428,7 @@ args = {
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
 
@@ -484,7 +479,7 @@ local function W8(functionName)
         print("Error in " .. tostring(functionName) .. ": ", err)
     end
 
-    wait(0.1)
+    wait(0.03)
 end
 
     local function Teleport(world)
@@ -554,6 +549,7 @@ end
         Icon = "rbxassetid://4483345998",
         PremiumOnly = false
     })
+
     -- Tabs
     Tab:AddToggle({
         Name = "Auto Damage",
@@ -725,7 +721,7 @@ W8Tab:AddToggle({
 	Callback = function(Value)
 	  getgenv().SwordSimulator.W8L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W8L1 do
+		while true do
 		 W8("1") 
 		end 
 	  end
@@ -736,9 +732,9 @@ W8Tab:AddToggle({
 	Name = "L249 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W8L2 = Value 
+	  getgenv().SwordSimulator.W8L249 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W8L2 do
+		while true do
 		 W8("2")  
 		end 
 	  end
@@ -749,9 +745,9 @@ W8Tab:AddToggle({
 	Name = "L285 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W8L3 = Value 
+	  getgenv().SwordSimulator.W8L285 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W8L3 do
+		while true do
 		 W8("3") 
 		end 
 	  end
@@ -762,9 +758,9 @@ W8Tab:AddToggle({
     Name = "VIP DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W8VIP1 = Value 
+        getgenv().SwordSimulator.W8VIP = Value 
         if Value then 
-            while getgenv().SwordSimulator.W8VIP1 do
+            while true do
                 W8("VIP1") 
             end
         end
@@ -775,9 +771,9 @@ W8Tab:AddToggle({
     Name = "VIP + L285 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W8VIP3 = Value 
+        getgenv().SwordSimulator.W8VIP285 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W8VIP3 do
+            while true do
                 W8("VIP3")  
             end
         end
@@ -788,9 +784,8 @@ W7Tab:AddToggle({
 	Name = "L1 DUMMY",
 	Default = false,
 	Callback = function(Value)
-          getgenv().SwordSimulator.W7L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W7L1 do
+		while true do
 		 W7("1") 
 		end 
 	  end
@@ -801,9 +796,9 @@ W7Tab:AddToggle({
 	Name = "L190 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W7L2 = Value 
+	  getgenv().SwordSimulator.W7L249 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W7L2 do
+		while true do
 		 W7("2")  
 		end 
 	  end
@@ -814,9 +809,9 @@ W7Tab:AddToggle({
 	Name = "L205 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W7L3 = Value 
+	  getgenv().SwordSimulator.W7L285 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W7L3 do
+		while true do
 		 W7("3") 
 		end 
 	  end
@@ -827,9 +822,9 @@ W7Tab:AddToggle({
     Name = "VIP + L190 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W7VIP2 = Value 
+        getgenv().SwordSimulator.W7VIP = Value 
         if Value then 
-            while getgenv().SwordSimulator.W7VIP2 do
+            while true do
                 W7("VIP2") 
             end
         end
@@ -840,22 +835,22 @@ W7Tab:AddToggle({
     Name = "VIP + L205 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W7VIP3 = Value 
+        getgenv().SwordSimulator.W7VIP285 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W7VIP3 do
+            while true do
                 W7("VIP3")  
             end
         end
     end
 })
 
+
 W6Tab:AddToggle({
 	Name = "L1 DUMMY",
 	Default = false,
 	Callback = function(Value)
-          getgenv().SwordSimulator.W6L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W6L1 do
+		while true do
 		 W6("1") 
 		end 
 	  end
@@ -866,10 +861,9 @@ W6Tab:AddToggle({
 	Name = "L145 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W6L2 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W6L2 do
-		 W6("2")  
+		while true do
+		 W6("2") 
 		end 
 	  end
 end
@@ -879,23 +873,22 @@ W6Tab:AddToggle({
 	Name = "L160 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W6L3 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W6L3 do
-		 W6("3") 
+		while true do
+		 W6("3")  
 		end 
 	  end
 end
 })
 
+
 W6Tab:AddToggle({
-    Name = "VIP + L145 DUMMY",
+    Name = "VIP DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W6VIP2 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W6VIP2 do
-                W6("VIP2") 
+            while true do
+                W6("VIP1") 
             end
         end
     end
@@ -905,9 +898,8 @@ W6Tab:AddToggle({
     Name = "VIP + L160 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W6VIP3 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W6VIP3 do
+            while true do
                 W6("VIP3")  
             end
         end
@@ -918,9 +910,8 @@ W5Tab:AddToggle({
 	Name = "L1 DUMMY",
 	Default = false,
 	Callback = function(Value)
-          getgenv().SwordSimulator.W5L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W5L1 do
+		while true do
 		 W5("1") 
 		end 
 	  end
@@ -931,10 +922,9 @@ W5Tab:AddToggle({
 	Name = "L105 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W5L2 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W5L2 do
-		 W5("2")  
+		while true do
+		 W5("2") 
 		end 
 	  end
 end
@@ -944,22 +934,21 @@ W5Tab:AddToggle({
 	Name = "L120 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W5L3 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W5L3 do
-		 W5("3") 
+		while true do
+		 W5("3")  
 		end 
 	  end
 end
 })
 
+
 W5Tab:AddToggle({
-    Name = "VIP + L1 DUMMY",
+    Name = "VIP DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W5VIP1 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W5VIP1 do
+            while true do
                 W5("VIP1") 
             end
         end
@@ -970,10 +959,9 @@ W5Tab:AddToggle({
     Name = "VIP + L105 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W5VIP2 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W5VIP2 do
-                W5("VIP2") 
+            while true do
+                W5("VIP2")  
             end
         end
     end
@@ -983,9 +971,8 @@ W5Tab:AddToggle({
     Name = "VIP + L120 DUMMY",
     Default = false,
     Callback = function(Value)
-        getgenv().SwordSimulator.W5VIP3 = Value 
         if Value then 
-            while getgenv().SwordSimulator.W5VIP3 do
+            while true do
                 W5("VIP3")  
             end
         end
@@ -996,23 +983,9 @@ W4Tab:AddToggle({
 	Name = "L1 DUMMY",
 	Default = false,
 	Callback = function(Value)
-          getgenv().SwordSimulator.W4L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W4L1 do
+		while true do
 		 W4("1") 
-		end 
-	  end
-end
-})
-
-W4Tab:AddToggle({
-	Name = "L75 DUMMY",
-	Default = false,
-	Callback = function(Value)
-	  getgenv().SwordSimulator.W4L2 = Value 
-	  if Value then 
-		while getgenv().SwordSimulator.W4L2 do
-		 W4("2")  
 		end 
 	  end
 end
@@ -1022,49 +995,32 @@ W4Tab:AddToggle({
 	Name = "L65 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W4L3 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W4L3 do
-		 W4("3") 
+		while true do
+		 W4("2") 
 		end 
 	  end
 end
 })
 
 W4Tab:AddToggle({
-    Name = "VIP + L75 DUMMY",
-    Default = false,
-    Callback = function(Value)
-        getgenv().SwordSimulator.W4VIP2 = Value 
-        if Value then 
-            while getgenv().SwordSimulator.W4VIP2 do
-                W4("VIP2") 
-            end
-        end
-    end
+	Name = "L75 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W4("3")  
+		end 
+	  end
+end
 })
-
-W4Tab:AddToggle({
-    Name = "VIP + L65 DUMMY",
-    Default = false,
-    Callback = function(Value)
-        getgenv().SwordSimulator.W4VIP3 = Value 
-        if Value then 
-            while getgenv().SwordSimulator.W4VIP3 do
-                W4("VIP3")  
-            end
-        end
-    end
-})
-
 
 W3Tab:AddToggle({
 	Name = "L1 DUMMY",
 	Default = false,
 	Callback = function(Value)
-          getgenv().SwordSimulator.W3L1 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W3L1 do
+		while true do
 		 W3("1") 
 		end 
 	  end
@@ -1072,55 +1028,27 @@ end
 })
 
 W3Tab:AddToggle({
-	Name = "L40 DUMMY",
+	Name = "L65 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W3L2 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W3L2 do
-		 W3("2")  
+		while true do
+		 W3("2") 
 		end 
 	  end
 end
 })
 
 W3Tab:AddToggle({
-	Name = "L50 DUMMY",
+	Name = "L75 DUMMY",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.W3L3 = Value 
 	  if Value then 
-		while getgenv().SwordSimulator.W3L3 do
-		 W3("3") 
+		while true do
+		 W3("3")  
 		end 
 	  end
 end
-})
-
-W3Tab:AddToggle({
-    Name = "VIP + L40 DUMMY",
-    Default = false,
-    Callback = function(Value)
-        getgenv().SwordSimulator.W3VIP2 = Value 
-        if Value then 
-            while getgenv().SwordSimulator.W3VIP2 do
-                W3("VIP2") 
-            end
-        end
-    end
-})
-
-W3Tab:AddToggle({
-    Name = "VIP + L50 DUMMY",
-    Default = false,
-    Callback = function(Value)
-        getgenv().SwordSimulator.W3VIP3 = Value 
-        if Value then 
-            while getgenv().SwordSimulator.W3VIP3 do
-                W3("VIP3")  
-            end
-        end
-    end
 })
 
 end

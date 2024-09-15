@@ -24,8 +24,6 @@ local validPlaceIds = {
 }
 
 if true then
-
-
     -- Values
     getgenv().SwordSimulator = {
         AutoDamage = false,

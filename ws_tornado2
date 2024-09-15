@@ -1101,5 +1101,41 @@ W3Tab:AddToggle({
 end
 })
 
+W2Tab:AddToggle({
+	Name = "L1 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("1") 
+		end 
+	  end
+end
+})
+
+W2Tab:AddToggle({
+	Name = "L25 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("2") 
+		end 
+	  end
+end
+})
+
+W2Tab:AddToggle({
+	Name = "L35 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("3")  
+		end 
+	  end
+end
+})
+
 end
 OrionLib:Init()

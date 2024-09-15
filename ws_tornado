@@ -24,8 +24,6 @@ local validPlaceIds = {
 }
 
 if true then
-
-
     -- Values
     getgenv().SwordSimulator = {
         AutoDamage = false,
@@ -173,6 +171,56 @@ local function ClaimSeason()
             wait(0.5)
         end
     end
+
+local function W2(functionName)
+    local success, err = pcall(function()
+        local args = {}
+
+        -- Switch case structure
+        if functionName == "1" then
+            args = {
+    [1] = true,
+    [2] = CFrame.new(-86.9388198852539, 1.5773658752441406, -495.1338806152344, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    [3] = Vector3.new(-0.11022616922855377, 1, -1.9969602823257446)
+            }
+        elseif functionName == "2" then
+            args = {
+    [1] = true,
+    [2] = CFrame.new(-108.88616180419922, 1.5773658752441406, -493.3116455078125, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    [3] = Vector3.new(-0.0282139852643013, 0.9999998211860657, -1.9998011589050293)
+            }
+        elseif functionName == "3" then
+            args = {
+    [1] = true,
+    [2] = CFrame.new(-130.14437866210938, 1.5773658752441406, -494.3190002441406, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    [3] = Vector3.new(-0.030908141285181046, 1.0000001192092896, -1.9997611045837402)
+            }
+        elseif functionName == "VIP2" then
+            args = {
+    [1] = true,
+    [2] = CFrame.new(-125.01549530029297, 1.692002296447754, -460.34716796875, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    [3] = Vector3.new(1.5435998439788818, 1.0000001192092896, 1.271730899810791)
+            }
+        elseif functionName == "VIP3" then
+            args = {
+    [1] = true,
+    [2] = CFrame.new(-107.60614013671875, 1.692000389099121, -448.1282958984375, 1, 0, 0, 0, 1, 0, 0, 0, 1),
+    [3] = Vector3.new(-1.75201416015625, 1.000000238418579, -0.9645962715148926)
+            }
+        else
+            error("Invalid function name: " .. tostring(functionName))
+        end
+
+        -- Fire the remote event with unpacked args
+        ReplicatedStorage.Remotes.Skill.ServerBehaviour:FireServer(unpack(args))
+    end)
+
+    if not success then
+        print("Error in " .. tostring(functionName) .. ": ", err)
+    end
+
+    wait(0.03)
+end
 
 local function W3(functionName)
     local success, err = pcall(function()
@@ -546,6 +594,12 @@ end
 
     local W3Tab = Window:MakeTab({
         Name = "World 3",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
+    local W2Tab = Window:MakeTab({
+        Name = "World 2",
         Icon = "rbxassetid://4483345998",
         PremiumOnly = false
     })
@@ -1046,6 +1100,42 @@ W3Tab:AddToggle({
 	  if Value then 
 		while true do
 		 W3("3")  
+		end 
+	  end
+end
+})
+
+W2Tab:AddToggle({
+	Name = "L1 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("1") 
+		end 
+	  end
+end
+})
+
+W2Tab:AddToggle({
+	Name = "L25 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("2") 
+		end 
+	  end
+end
+})
+
+W2Tab:AddToggle({
+	Name = "L35 DUMMY",
+	Default = false,
+	Callback = function(Value)
+	  if Value then 
+		while true do
+		 W2("3")  
 		end 
 	  end
 end

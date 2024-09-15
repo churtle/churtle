@@ -600,6 +600,12 @@ end
         PremiumOnly = false
     })
 
+    local W2Tab = Window:MakeTab({
+        Name = "World 2",
+        Icon = "rbxassetid://4483345998",
+        PremiumOnly = false
+    })
+
     -- Tabs
     Tab:AddToggle({
         Name = "Auto Damage",

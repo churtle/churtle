@@ -1,0 +1,24 @@
+local function RaidGem()
+
+local args = {
+    [1] = 2
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Common"):WaitForChild("DailyShop"):WaitForChild("BuyItem"):FireServer(unpack(args))
+
+end
+
+wait(3)
+
+for i = 1, 5 do
+RaidGem()
+wait(0.1)
+end
+
+local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ts:Teleport(game.PlaceId, p)
+
+wait(1)

@@ -10,10 +10,16 @@ end
 
 wait(3)
 
-for i = 1, 5 do
 RaidGem()
 wait(0.1)
-end
+RaidGem()
+wait(0.1)
+RaidGem()
+wait(0.1)
+RaidGem()
+wait(0.1)
+RaidGem()
+wait(1)
 
 local ts = game:GetService("TeleportService")
 

@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://pastebin.com/raw/WRUyYTdY')))()
-  local Window = OrionLib:MakeWindow({Name = "ツ", HidePremium = false, IntroText = "NICE MEETING YOU GUYSツ", SaveConfig = true, ConfigFolder = "OrionTest"})
+  local Window = OrionLib:MakeWindow({Name = "", HidePremium = false, IntroText = "", SaveConfig = true, ConfigFolder = "OrionTest"})
   local ReplicatedStorage, RunService, Workspace, Lighting, Players = game:GetService("ReplicatedStorage"), game:GetService("RunService"), game:GetService("Workspace"), game:GetService("Lighting"), game:GetService("Players")
 if game.PlaceId == 16436007861 
 or game.PlaceId == 17856546976

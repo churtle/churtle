@@ -756,9 +756,44 @@ TELTab:AddButton({
 })
 
 TELTab:AddButton({
+	Name = "World 2",
+	Callback = function(Value)
+		Teleport(2)
+	  end
+})
+
+TELTab:AddButton({
+	Name = "World 3",
+	Callback = function(Value)
+		Teleport(3)
+	  end
+})
+
+TELTab:AddButton({
 	Name = "World 4",
 	Callback = function(Value)
 		Teleport(4)
+	  end
+})
+
+TELTab:AddButton({
+	Name = "World 5",
+	Callback = function(Value)
+		Teleport(5)
+	  end
+})
+
+TELTab:AddButton({
+	Name = "World 6",
+	Callback = function(Value)
+		Teleport(6)
+	  end
+})
+
+TELTab:AddButton({
+	Name = "World 7",
+	Callback = function(Value)
+		Teleport(7)
 	  end
 })
 

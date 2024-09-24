@@ -8,7 +8,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Commo
 
 end
 
-wait(1)
+wait(0.1)
 
 RaidGem()
 wait(0.1)
@@ -19,7 +19,7 @@ wait(0.1)
 RaidGem()
 wait(0.1)
 RaidGem()
-wait(3)
+wait(2)
 
 local ts = game:GetService("TeleportService")
 

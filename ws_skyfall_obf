@@ -456,7 +456,7 @@ end
 
 MiscTab:AddTextbox({
 	Name = "Walkspeed",
-	Default = 16,
+	Default = 160,
 	TextDisappear = false,
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value

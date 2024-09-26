@@ -461,6 +461,7 @@ MiscTab:AddTextbox({
 	Callback = function(Value)
 	while true do
 		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+		wait(1)
 	end
 	end	  
 })

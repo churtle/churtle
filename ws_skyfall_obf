@@ -34,6 +34,7 @@ if true then
         AutoDamage = false,
         AutoSkillDamage = false,
         AutoSpooderman = false,
+	No3D = false,
         KillAura = false,
         ClaimGift = false,
         ClaimSeasonPass = false,
@@ -438,10 +439,10 @@ MiscTab:AddToggle({
 	Name = "NO 3D",
 	Default = false,
 	Callback = function(Value)
-	  getgenv().SwordSimulator.ClaimSeasonPass = Value 
+	  getgenv().SwordSimulator.No3D = Value 
 	  if Value then 
 		game:GetService("RunService"):Set3dRenderingEnabled(false)
-		while true do
+		while getgenv().SwordSimulator.No3D do
 			game:GetService("RunService"):Set3dRenderingEnabled(true)
 			wait(1)
 			game:GetService("RunService"):Set3dRenderingEnabled(false)
